@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import { site } from '../content/site'
 
 type Section = { label: string; href: string }
 
@@ -10,7 +9,7 @@ const SECTIONS: Section[] = [
   { label: 'About', href: '#about' },
 ]
 
-const RAIL_LEFT = 'max(0.5rem, calc((100vw - min(100vw, 48rem)) / 2 - 21.25rem))'
+const RAIL_LEFT = 'max(0.7rem, calc((50vw - min(50vw, 72rem)) / 2 - 15rem))'
 const SCROLL_FADE_PX = 120
 
 function smoothstep(t: number): number {
@@ -50,7 +49,7 @@ function resolveActiveSection(scout: number): string {
 }
 
 function SectionMark({ className = '' }: { className?: string }) {
-  const w = 180
+  const w = 130
   const h = 56
   const stemX = 18
   const topY = 10
@@ -78,7 +77,7 @@ function SectionMark({ className = '' }: { className?: string }) {
   )
 }
 
-/** Fixed left cue: avatar at top; L + label crossfade in on scroll. */
+/** Fixed left cue: L + label; fades in after scrolling past the hero. */
 export function SectionRail() {
   const [active, setActive] = useState(() => SECTIONS[0]!.href.slice(1))
   const [markVisible, setMarkVisible] = useState(0)
@@ -128,53 +127,33 @@ export function SectionRail() {
   }, [])
 
   const activeItem = SECTIONS.find((item) => item.href.slice(1) === active) ?? SECTIONS[0]!
-  const hasAvatar = Boolean(site.railAvatar)
-  const fade = hasAvatar ? markVisible : 1
-  const avatarOpacity = hasAvatar ? 1 - markVisible : 0
-  const showMark = fade > 0.02
+  const showMark = markVisible > 0.02
 
   return (
     <div className="pointer-events-none fixed inset-0 z-[35] hidden xl:block">
-      <div className="fixed top-28 w-[15rem]" style={{ left: RAIL_LEFT }}>
-        {site.railAvatar ? (
-          <img
-            src={site.railAvatar.src}
-            alt={site.railAvatar.alt}
-            width={240}
-            height={240}
-            className="-ml-1 size-60 rounded-full border-2 border-accent/35 bg-surface-solid object-cover object-top shadow-sm shadow-black/10 transition-[opacity,transform] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[opacity,transform] motion-reduce:transition-none dark:shadow-black/30"
-            style={{
-              opacity: avatarOpacity,
-              transform: `scale(${0.94 + avatarOpacity * 0.06})`,
-              pointerEvents: avatarOpacity > 0.5 ? 'auto' : 'none',
-            }}
-            decoding="async"
-          />
-        ) : null}
-
-        <nav
-          aria-label="Current section"
-          aria-hidden={!showMark}
-          className="absolute left-0 top-0 flex w-full max-w-full items-center gap-3.5 text-accent transition-[opacity,transform] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[opacity,transform] motion-reduce:transition-none"
-          style={{
-            opacity: fade * 0.78,
-            transform: `translateY(${(1 - fade) * 10}px)`,
-            pointerEvents: fade > 0.45 ? 'auto' : 'none',
-          }}
+      <nav
+        aria-label="Current section"
+        aria-hidden={!showMark}
+        className="pointer-events-auto absolute top-28 flex max-w-full items-center gap-3.5 text-accent transition-[opacity,transform] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[opacity,transform] motion-reduce:transition-none"
+        style={{
+          left: RAIL_LEFT,
+          opacity: markVisible * 0.78,
+          transform: `translateY(${(1 - markVisible) * 10}px)`,
+          pointerEvents: markVisible > 0.45 ? 'auto' : 'none',
+        }}
+      >
+        <p id="section-rail-status" className="sr-only" aria-live="polite">
+          Now viewing section: {activeItem.label}
+        </p>
+        <SectionMark className="shrink-0" />
+        <a
+          href={activeItem.href}
+          tabIndex={showMark ? undefined : -1}
+          className="min-w-0 text-sm font-medium tracking-tight text-accent underline-offset-[3px] transition-colors hover:text-accent-hover hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
-          <p id="section-rail-status" className="sr-only" aria-live="polite">
-            Now viewing section: {activeItem.label}
-          </p>
-          <SectionMark className="shrink-0" />
-          <a
-            href={activeItem.href}
-            tabIndex={showMark ? undefined : -1}
-            className="min-w-0 text-sm font-medium tracking-tight text-accent underline-offset-[3px] transition-colors hover:text-accent-hover hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-          >
-            {activeItem.label}
-          </a>
-        </nav>
-      </div>
+          {activeItem.label}
+        </a>
+      </nav>
     </div>
   )
 }

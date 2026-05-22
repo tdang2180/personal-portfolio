@@ -1,4 +1,3 @@
-import { About } from '../components/About'
 import { Experience } from '../components/Experience'
 import { Hero } from '../components/Hero'
 import { Projects } from '../components/Projects'
@@ -9,7 +8,6 @@ export function HomePage() {
       <Hero />
       <Projects />
       <Experience />
-      <About />
     </>
   )
 }

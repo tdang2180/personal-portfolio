@@ -7,15 +7,16 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="scroll-mt-24 border-b border-border-strong/60 pb-16 pt-12 sm:pb-20 sm:pt-16"
+      className="border-b border-border-strong/60 pt-12 sm:pb-10 sm:pt-16"
       aria-labelledby="hero-heading"
     >
+      <div className="grid lg:grid-cols-[minmax(0,0.9fr)_auto]">
         <div>
           <h1
             id="hero-heading"
-            className="text-4xl font-semibold tracking-tight text-foreground sm:text-4xl sm:leading-[1.1]"
+            className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl sm:leading-[1.1]"
           >
-             {site.name}
+            {site.name}
           </h1>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">{site.tagline}</p>
           <p className="mt-4 max-w-2xl leading-relaxed">{site.intro}</p>
@@ -23,20 +24,17 @@ export function Hero() {
         </div>
 
         {media ? (
-          <div className="flex justify-center lg:justify-end">
-            <figure className="w-full max-w-[280px]">
-              <img
-                src={media.src}
-                alt={media.alt}
-                width={560}
-                height={700}
-                className="aspect-[4/5] w-full rounded-2xl border border-card-border bg-surface-solid object-cover shadow-md shadow-black/10 dark:shadow-black/25"
-                loading="eager"
-                decoding="async"
-              />
-            </figure>
-          </div>
+          <figure className="mx-auto shrink-0 lg:mx-0">
+            <img
+              src={media.src}
+              alt={media.alt}
+              className="rounded-full border-2 border-accent/35 bg-surface-solid object-cover object-top shadow-md shadow-black/10 lg:size-60 dark:shadow-black/25"
+              loading="eager"
+              decoding="async"
+            />
+          </figure>
         ) : null}
+      </div>
     </section>
   )
 }

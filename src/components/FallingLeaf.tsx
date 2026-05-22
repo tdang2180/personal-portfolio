@@ -172,7 +172,7 @@ export function FallingLeaf() {
   return (
     <div
       className="falling-leaf-skip pointer-events-none fixed top-[5.75rem] z-40 hidden lg:block"
-      style={{ right: '10rem' }}
+      style={{ right: '7rem' }}
     >
       <button
         type="button"
