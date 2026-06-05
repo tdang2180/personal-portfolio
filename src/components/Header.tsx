@@ -1,4 +1,5 @@
 import { site } from '../content/site'
+import { SECTION_WIDTH, SectionContainer } from './SectionContainer'
 import { ThemeToggle } from './ThemeToggle'
 
 const nav = [
@@ -13,7 +14,10 @@ const linkClass =
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border-strong/80 bg-header-bg backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-8 px-6 py-4 sm:px-8 lg:gap-16">
+      <SectionContainer
+        width={SECTION_WIDTH.header}
+        className="flex items-center justify-between gap-8 py-4 lg:gap-16"
+      >
         <a
           href="#top"
           className="text-lg font-semibold tracking-tight text-foreground transition-colors hover:text-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-xl"
@@ -34,7 +38,7 @@ export function Header() {
           </nav>
           <ThemeToggle />
         </div>
-      </div>
+      </SectionContainer>
     </header>
   )
 }

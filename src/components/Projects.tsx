@@ -3,6 +3,7 @@ import type { Project, ProjectImage } from '../content/site'
 import { site } from '../content/site'
 import { ImageLightbox } from './ImageLightbox'
 import { ProjectImageCarousel } from './ProjectImageCarousel'
+import { SECTION_WIDTH, SectionContainer } from './SectionContainer'
 import { GitHubIcon, WebsiteIcon, YouTubeIcon } from './SocialIcons'
 
 const projectLinkClass =
@@ -125,17 +126,18 @@ export function Projects() {
       className="border-b border-border-strong/60 py-16 sm:py-10"
       aria-labelledby="projects-heading"
     >
+      <SectionContainer width={SECTION_WIDTH.projects}>
       <h2
         id="projects-heading"
         className="text-xs font-bold uppercase tracking-[0.2em]"
       >
         Projects
       </h2>
-      <ul className="mt-6 grid grid-cols-1 lg:grid-cols-2 lg:gap-4">
+      <ul className="mt-6 grid grid-cols-3 items-start gap-3">
         {site.projects.map((project) => (
           <li
             key={project.title}
-            className="flex h-full flex-col rounded-2xl border border-card-border bg-card p-5 shadow-sm shadow-black/10 transition hover:border-card-border-hover sm:p-6 dark:shadow-black/20"
+            className="rounded-2xl border border-card-border bg-card p-4 shadow-sm shadow-black/10 transition hover:border-card-border-hover sm:p-5 dark:shadow-black/20"
           >
             <div className="flex flex-wrap items-center gap-x-2.5 gap-y-2">
               <h3 className="text-lg font-semibold tracking-tight text-foreground">
@@ -150,7 +152,7 @@ export function Projects() {
               </p>
             ) : null}
 
-            <div className="mt-auto pt-2">
+            <div className="mt-4">
               <ProjectMedia project={project} />
               {project.tags.length > 0 ? (
                 <ul
@@ -170,6 +172,7 @@ export function Projects() {
           </li>
         ))}
       </ul>
+      </SectionContainer>
     </section>
   )
 }

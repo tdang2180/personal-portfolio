@@ -1,5 +1,6 @@
 import { site } from '../content/site'
 import { Contact } from './Contact'
+import { SECTION_WIDTH, SectionContainer } from './SectionContainer'
 
 export function Hero() {
   const media = site.heroMedia
@@ -10,7 +11,8 @@ export function Hero() {
       className="border-b border-border-strong/60 pt-12 sm:pb-10 sm:pt-16"
       aria-labelledby="hero-heading"
     >
-      <div className="grid lg:grid-cols-[minmax(0,0.9fr)_auto]">
+      <SectionContainer width={SECTION_WIDTH.hero}>
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-12">
         <div>
           <h1
             id="hero-heading"
@@ -35,6 +37,7 @@ export function Hero() {
           </figure>
         ) : null}
       </div>
+      </SectionContainer>
     </section>
   )
 }

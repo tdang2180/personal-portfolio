@@ -126,22 +126,20 @@ export const site: SiteConfig = {
     {
       title: 'Mobility Scooter Web App',
       description:
-        `The Mobility Scooter Web App (MSWA) is an open source clinical web app funded by the National Science Foundation (NFS). Its purpose is to enable physical therapists, their students and researchers to upload and analyze videos of patients using mobility scooters. 
-        Over the years, we have fine-tuned machine learning models to identify the pose and task of a given patient for a given frame or segment of frames.`,
-      tags: ['React', 'NestJS', 'Redis', 'TypeScript', 'Python', 'Ray', 'Kafka', 'OpenStack', 'PostgreSQL', 'Docker', 'Ultralytics YOLO', 'WhisperX', 'Pytorch','Gemma'],
+        `The Mobility Scooter Web App (MSWA) is an open source clinical web app funded by the National Science Foundation (NFS). 
+        Its purpose is to enable clinicians and researchers to upload and analyze videos of patients operating mobility scooters. `,
+      tags: ['React', 'NestJS', 'Redis', 'TypeScript', 'Python', 'Ray', 'Kafka', 'PostgreSQL', 'Docker', 'YOLO', 'WhisperX', 'Pytorch','Gemma'],
       repoUrl: 'https://github.com/Mobility-Scooter-Project/mobility-scooter-web-app/tree/develop',
-      images: [{ src: '/mswa.jpg', alt: 'Trailtalk ' },],
+      images: [{ src: '/mswa.jpg', alt: 'Mobility Scooter Web App'},],
     },
     {
       title: 'Trailtalk',
       description:
         `Trailtalk is a social media platform centered around national parks where people share experiences, discover new spots, and connect with like-minded adventurers. 
-        It features both mobile and web interfaces, with a map view where users can see all the national parks in the United States with dedicated map pages for each park, where users can post and interact with other users' posts.
-        Users can also follow each other and send messages.
-        `,
+        It features both mobile and web interfaces, with a map view of all national parks in the US, dedicated map pages, and message system.`,
       tags: ['React', 'TypeScript', 'MapLibre', 'Firebase', 'Tailwind CSS'],
       liveUrl: 'https://evergreen-industries.web.app/',
-      images: [{ src: '/trailtalk.png', alt: 'Trailtalk ' }, { src: '/trailtalk_map.png', alt: 'Trailtalk national parks map' }],
+      images: [{ src: '/trailtalk.png', alt: 'Trailtalk'}, { src: '/trailtalk_map.png', alt: 'Trailtalk national parks map'}],
     },
     {
       title: 'Carbon Closet',
@@ -150,7 +148,7 @@ export const site: SiteConfig = {
         Users earn tokens and unlock rewards for shopping sustainably. Won 3rd out of 60 teams at the Cal Poly Pomona Hackathon (BroncoHacks) 2025.`,
       tags: ['Next.js', 'React', 'JavaScript', 'Tailwind CSS', 'Firebase', 'ShadCN', 'Docker'],
       repoUrl: 'https://github.com/uuriah/LeBroncoHacks',
-      images: [{ src: '/carboncloset.png', alt: 'Carbon Closet ' },],
+      images: [{ src: '/carboncloset.png', alt: 'Carbon Closet'},],
     },
     {
       title: 'Recyclable or Not Bot',
@@ -160,6 +158,26 @@ export const site: SiteConfig = {
       tags: ['Python', 'Flask', 'OpenCV', 'Ultralytics YOLO', 'React', 'JavaScript', 'CSS'],
       repoUrl: 'https://github.com/joshmre/computer-vision-webapp',
       videoUrl: 'https://www.youtube.com/watch?v=oJyRTPOPXxo',
+    },
+    {
+      title: 'Icebreak',
+      description:
+        `Icebreak is SEA’s mobile platform to connect school organizations with their members. 
+        Icebreak aims to be the central hub for members to remain updated on current organization events.`,
+      tags: ['JavaScript', 'React Native', 'Express.js', 'PostgreSQL'],
+      repoUrl: 'https://github.com/cppsea/icebreak',
+      liveUrl: 'https://cppsea.com/projects/icebreak/',
+      images: [{ src: '/icebreak.png', alt: 'Icebreak'},],
+    },
+    {
+      title: 'BroncoDirectMe',
+      description:
+        `BroncoDirectMe is an extension for Chrome and other Chromium-based browsers that enhances the BroncoDirect website. 
+        This extension’s purpose is to make it easier for Cal Poly Pomona students to make an informed decision when registering for classes.`,
+      tags: ['TypeScript', 'CSS', 'React', 'Express.js', 'MySQL'],
+      repoUrl: 'https://github.com/BroncoDirectMe',
+      liveUrl: 'https://broncodirect.me/',
+      images: [{ src: '/broncodirectme.png', alt: 'BroncoDirectMe'},],
     },
   ],
   social: [

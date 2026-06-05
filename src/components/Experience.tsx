@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { site, type ExperienceEntry } from '../content/site'
+import { SECTION_WIDTH, SectionContainer } from './SectionContainer'
 import { WebsiteIcon } from './SocialIcons'
 
 const companyIconLinkClass =
@@ -39,6 +40,7 @@ export function Experience() {
       className="scroll-mt-24 py-16 sm:py-10"
       aria-labelledby="experience-heading"
     >
+      <SectionContainer width={SECTION_WIDTH.experience}>
       <h2
         id="experience-heading"
         className="text-xs font-bold uppercase tracking-[0.2em]"
@@ -77,6 +79,7 @@ export function Experience() {
           </li>
         ))}
       </ol>
+      </SectionContainer>
     </section>
   )
 }
