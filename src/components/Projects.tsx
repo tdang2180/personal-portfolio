@@ -147,7 +147,7 @@ export function Projects() {
             </div>
 
             {project.description.trim() ? (
-              <p className="mt-3 text-sm leading-relaxed text-muted">
+              <p className="mt-3 text-[15px] leading-relaxed">
                 {project.description.trim()}
               </p>
             ) : null}
@@ -161,7 +161,7 @@ export function Projects() {
                 >
                   {project.tags.map((tag) => (
                     <li key={tag}>
-                      <span className="inline-flex rounded-full border border-card-border bg-surface px-3 py-1 text-sm font-medium">
+                      <span className="inline-flex rounded-full border border-card-border bg-surface px-3 py-1 text-[14px]">
                         {tag}
                       </span>
                     </li>
