@@ -123,7 +123,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="border-b border-border-strong/60 py-16 sm:py-10"
+      className="scroll-mt-24 border-b border-border-strong/60 py-16 sm:py-10"
       aria-labelledby="projects-heading"
     >
       <SectionContainer width={SECTION_WIDTH.projects}>

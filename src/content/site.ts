@@ -179,6 +179,15 @@ export const site: SiteConfig = {
       liveUrl: 'https://broncodirect.me/',
       images: [{ src: '/broncodirectme.png', alt: 'BroncoDirectMe'},],
     },
+    {
+      title: 'LetMesh',
+      description:
+        `LetMesh is an open-source project that aims to provide students with a unique opportunity to gain mentorship, practice collaborative skills, 
+        and familiarize themselves with modern technologies and software methodologies. `,
+      tags: ['TypeScript', 'CSS', 'React', 'Python', 'Django'],
+      repoUrl: 'https://github.com/LetsMesh',
+      images: [{ src: '/mesh.png', alt: 'LetMesh'},],
+    }
   ],
   social: [
     { label: 'GitHub', href: 'https://github.com/tdang2180', icon: 'github' },

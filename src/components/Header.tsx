@@ -3,9 +3,10 @@ import { SECTION_WIDTH, SectionContainer } from './SectionContainer'
 import { ThemeToggle } from './ThemeToggle'
 
 const nav = [
+  { label: 'About', href: '#top' },
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
-  { label: 'About', href: '#about' },
+  
 ] as const
 
 const linkClass =

@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-/* Dark: deep blue-black + sky accents. Light: white + light sky blue accents */
+/* Dark: deep blue-black + sky accents. Light: white + darker blue accents */
 :root {
   --background: #020617;
   --foreground: #f8fafc;
@@ -30,27 +30,27 @@
 [data-theme='light'] {
   --background: #ffffff;
   --foreground: #0f172a;
-  --muted: #475569;
-  --subtle: #64748b;
-  --subtle-deep: #94a3b8;
-  --border: rgb(226 232 240 / 0.95);
-  --border-strong: #cbd5e1;
-  --card: rgb(240 249 255 / 0.72);
-  --card-border: rgb(186 230 253 / 0.95);
-  --card-border-hover: rgb(125 211 252 / 0.85);
-  --accent: #0284c7;
-  --accent-hover: #0369a1;
-  --accent-link-hover: #075985;
+  --muted: #334155;
+  --subtle: #475569;
+  --subtle-deep: #64748b;
+  --border: rgb(203 213 225 / 0.95);
+  --border-strong: #94a3b8;
+  --card: #ffffff;
+  --card-border: #cbd5e1;
+  --card-border-hover: #60a5fa;
+  --accent: #1d4ed8;
+  --accent-hover: #1e40af;
+  --accent-link-hover: #1e3a8a;
   --accent-foreground: #ffffff;
-  --surface: rgb(248 250 252 / 0.92);
-  --surface-solid: #f8fafc;
-  --surface-hover: rgb(224 242 254 / 0.95);
+  --surface: rgb(255 255 255 / 0.96);
+  --surface-solid: #ffffff;
+  --surface-hover: #f1f5f9;
   --elevated-border: #cbd5e1;
-  --code-bg: #e0f2fe;
-  --code-text: #0c4a6e;
-  --header-bg: rgb(255 255 255 / 0.88);
+  --code-bg: #eff6ff;
+  --code-text: #1e3a8a;
+  --header-bg: rgb(255 255 255 / 0.92);
   --timeline-ring: #ffffff;
-  --marker: #94a3b8;
+  --marker: #64748b;
 }
 
 @theme {
@@ -84,6 +84,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Sticky header clearance for # anchor links */
+    scroll-padding-top: 0rem;
   }
 
   body {

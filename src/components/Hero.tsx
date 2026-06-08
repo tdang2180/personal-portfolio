@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="border-b border-border-strong/60 pt-12 sm:pb-10 sm:pt-16"
+      className="scroll-mt-24 border-b border-border-strong/60 pt-12 sm:pb-10 sm:pt-16"
       aria-labelledby="hero-heading"
     >
       <SectionContainer width={SECTION_WIDTH.hero}>
