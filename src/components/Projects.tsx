@@ -133,21 +133,21 @@ export function Projects() {
       >
         Projects
       </h2>
-      <ul className="mt-6 grid grid-cols-3 items-start gap-3">
+      <ul className="mt-6 grid grid-cols-1 items-start gap-4 lg:grid-cols-3 lg:gap-3">
         {site.projects.map((project) => (
           <li
             key={project.title}
-            className="rounded-2xl border border-card-border bg-card p-4 shadow-sm shadow-black/10 transition hover:border-card-border-hover sm:p-5 dark:shadow-black/20"
+            className="min-w-0 rounded-2xl border border-card-border bg-card p-4 shadow-sm shadow-black/10 transition hover:border-card-border-hover sm:p-5 dark:shadow-black/20"
           >
-            <div className="flex flex-wrap items-center gap-x-2.5 gap-y-2">
-              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-2">
+              <h3 className="text-base font-semibold tracking-tight text-foreground sm:text-lg">
                 {project.title}
               </h3>
               <ProjectLinks project={project} />
             </div>
 
             {project.description.trim() ? (
-              <p className="mt-3 text-[15px] leading-relaxed">
+              <p className="mt-3 text-sm leading-relaxed sm:text-[15px]">
                 {project.description.trim()}
               </p>
             ) : null}
@@ -161,7 +161,7 @@ export function Projects() {
                 >
                   {project.tags.map((tag) => (
                     <li key={tag}>
-                      <span className="inline-flex rounded-full border border-card-border bg-surface px-3 py-1 text-[14px]">
+                      <span className="inline-flex rounded-full border border-card-border bg-surface px-2.5 py-0.5 text-xs lg:px-3 lg:py-1 lg:text-[14px]">
                         {tag}
                       </span>
                     </li>

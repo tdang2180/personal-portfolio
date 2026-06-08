@@ -9,7 +9,7 @@ const SHOW_SIDE_DECOR = false
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-screen bg-background font-sans text-foreground antialiased">
+    <div className="min-h-screen overflow-x-clip bg-background font-sans text-foreground antialiased">
       <Header />
       {SHOW_SIDE_DECOR ? <SectionRail /> : null}
       {SHOW_SIDE_DECOR ? <FallingLeaf /> : null}

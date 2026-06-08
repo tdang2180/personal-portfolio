@@ -29,7 +29,7 @@ function ChevronIcon({ direction }: { direction: 'left' | 'right' }) {
 }
 
 const navBtnClass =
-  'absolute top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-border-strong/80 bg-header-bg/90 text-foreground shadow-md backdrop-blur-sm transition hover:border-accent/40 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:pointer-events-none disabled:opacity-40'
+  'absolute top-1/2 z-10 flex size-8 -translate-y-1/2 items-center justify-center rounded-full border border-border-strong/80 bg-header-bg/90 text-foreground shadow-md backdrop-blur-sm transition hover:border-accent/40 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:size-10'
 
 export function ProjectImageCarousel({
   images,

@@ -4,7 +4,7 @@ import { SECTION_WIDTH, SectionContainer } from './SectionContainer'
 import { WebsiteIcon } from './SocialIcons'
 
 const companyIconLinkClass =
-  'inline-flex size-23 shrink-0 items-center justify-center overflow-hidden rounded-full border-5 border-accent/35 bg-white text-accent transition hover:border-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent'
+  'inline-flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-accent/35 bg-white text-accent transition hover:border-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:size-23 sm:border-5'
 
 function CompanySiteLink({ link }: { link: NonNullable<ExperienceEntry['link']> }) {
   const [imgFailed, setImgFailed] = useState(false)
@@ -47,7 +47,7 @@ export function Experience() {
       >
         Experience
       </h2>
-      <ol className="relative mt-12 border-l border-card-border pl-8 sm:pl-10">
+      <ol className="relative mt-8 border-l border-card-border pl-6 sm:mt-12 sm:pl-8 lg:pl-10">
         {site.experience.map((job, index) => (
           <li
             key={`${job.organization}-${job.period}`}

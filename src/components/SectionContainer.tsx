@@ -33,5 +33,5 @@ type SectionContainerProps = {
 }
 
 export function SectionContainer({ width, children, className = '' }: SectionContainerProps) {
-  return <div className={`${WIDTH_CLASS[width]} ${className}`.trim()}>{children}</div>
+  return <div className={`min-w-0 ${WIDTH_CLASS[width]} ${className}`.trim()}>{children}</div>
 }
