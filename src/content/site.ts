@@ -193,7 +193,7 @@ export const site: SiteConfig = {
     { label: 'GitHub', href: 'https://github.com/tdang2180', icon: 'github' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/thanhdang1/', icon: 'linkedin' },
     { label: 'Email', href: 'mailto:tdang2180@gmail.com', icon: 'email' },
-    { label: 'Resume', href: '/Resume - Thanh.pdf', icon: 'resume' },
+    { label: 'Resume', href: '/Resume - Thanh Dang.pdf', icon: 'resume' },
   ],
   location: 'Los Angeles, CA',
 }
