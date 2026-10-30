@@ -41,7 +41,10 @@ function ProjectLinks({ project }: { project: Project }) {
   if (links.length === 0) return null
 
   return (
-    <div className="inline-flex items-center gap-1.5" aria-label={`Links for ${project.title}`}>
+    <div
+      className="ml-2 inline-flex items-center gap-1.5 align-middle"
+      aria-label={`Links for ${project.title}`}
+    >
       {links.map(({ href, label, Icon }) => (
         <a
           key={href}
@@ -139,8 +142,8 @@ export function Projects() {
             key={project.title}
             className="min-w-0 rounded-2xl border border-card-border bg-card p-4 shadow-sm shadow-black/10 transition hover:border-card-border-hover sm:p-5 dark:shadow-black/20"
           >
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-2">
-              <h3 className="text-base font-semibold tracking-tight text-foreground sm:text-lg">
+            <div>
+              <h3 className="inline text-base font-semibold tracking-tight text-foreground sm:text-lg">
                 {project.title}
               </h3>
               <ProjectLinks project={project} />

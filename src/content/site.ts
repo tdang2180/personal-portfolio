@@ -63,17 +63,17 @@ export const site: SiteConfig = {
     'Software Engineer',
   /** Short intro under the hero headline */
   intro:
-    "Currently doing AI/ML research and full stack development at Cal Poly Pomona Enterprises.",
+    "",
   heroMedia: { src: '/headshot.PNG', alt: 'Portrait of Thanh Dang' },
   about: [
-    `I recently graduated from Cal Poly Pomona with a Bachelor of Science in Computer Science.`,
+    `I recently graduated from Cal Poly Pomona with a Bachelor of Science in Computer Science. Interested in applied ML/AI engineering`,
   ],
   experience: [
     {
       role: 'AI/ML Researcher & Full Stack Developer',
       organization: 'CPP Enterprises',
       location: 'Pomona, CA',
-      period: 'May 2025 - Present',
+      period: 'May 2025 - October 2026',
       bullets: [
       ],
       link: {
@@ -124,20 +124,30 @@ export const site: SiteConfig = {
   ],
   projects: [
     {
+      title: `Upper-body Movement Asymmetry Analysis with Latent Space Representation for 
+      Stroke Survivors During Powered Mobility`,
+      description: `This paper presents a transformer-based latent representation model that learns bilateral upper-body 
+      movement from pose keypoint sequences. Published at the IEEE International Conference on E-health Networking, Application & Services (HealthCom) 2026.`,
+      tags: ['Python', 'PyTorch', 'Transformer'],
+      repoUrl: 'https://github.com/Mobility-Scooter-Project/pose-asymmetry-analysis',
+      liveUrl: 'https://par.nsf.gov/biblio/10713593',
+      images: [{ src: '/msmodel.png', alt: 'Model Architecture'}],
+    },
+    {
       title: 'Mobility Scooter Web App',
       description:
-        `The Mobility Scooter Web App (MSWA) is an open source clinical web app funded by the National Science Foundation (NFS). 
-        Its purpose is to enable clinicians and researchers to upload and analyze videos of patients operating mobility scooters. `,
-      tags: ['React', 'NestJS', 'Redis', 'TypeScript', 'Python', 'Ray', 'Kafka', 'PostgreSQL', 'Docker', 'YOLO', 'WhisperX', 'Pytorch','Gemma'],
+        `The Mobility Scooter Web App (MSWA) is an open-source clinical web app funded by the National Science Foundation (NSF). It allows clinicians 
+        and researchers to collaborate in managing and analyzing videos of patients operating mobility scooters. `,
+      tags: ['TypeScript', 'React', 'NestJS', 'Redis', 'PostgreSQL', 'Python', 'Ray', 'Kafka', 'YOLO', 'WhisperX', 'PyTorch','Google Gemma', 'Docker'],
       repoUrl: 'https://github.com/Mobility-Scooter-Project/mobility-scooter-web-app/tree/develop',
       images: [{ src: '/mswa.jpg', alt: 'Mobility Scooter Web App'},],
     },
     {
       title: 'Trailtalk',
       description:
-        `Trailtalk is a social media platform centered around national parks where people share experiences, discover new spots, and connect with like-minded adventurers. 
-        It features both mobile and web interfaces, with a map view of all national parks in the US, dedicated map pages, and message system.`,
-      tags: ['React', 'TypeScript', 'MapLibre', 'Firebase', 'Tailwind CSS'],
+        `Trailtalk is a social media platform centered on national parks where users share experiences, discover new places, and connect with fellow adventurers. 
+        It features an interactive map of all U.S. national parks, individual park pages with posts and ratings, user profiles, friend messaging, etc.`,
+      tags: ['TypeScript', 'Tailwind CSS', 'React',  'MapLibre', 'Firebase'],
       liveUrl: 'https://evergreen-industries.web.app/',
       images: [{ src: '/trailtalk.png', alt: 'Trailtalk'}, { src: '/trailtalk_map.png', alt: 'Trailtalk national parks map'}],
     },
@@ -145,8 +155,8 @@ export const site: SiteConfig = {
       title: 'Carbon Closet',
       description:
         `Carbon Closet is a gamified e-commerce website that makes buying, selling, and donating secondhand clothing simple and rewarding. 
-        Users earn tokens and unlock rewards for shopping sustainably. Won 3rd out of 60 teams at the Cal Poly Pomona Hackathon (BroncoHacks) 2025.`,
-      tags: ['Next.js', 'React', 'JavaScript', 'Tailwind CSS', 'Firebase', 'ShadCN', 'Docker'],
+        Users earn tokens and unlock rewards for shopping sustainably. Won 3rd place among 60 teams at Cal Poly Pomona Hackathon (BroncoHacks) 2025.`,
+      tags: ['JavaScript', 'Tailwind CSS', 'ShadCN', 'Next.js', 'React', 'Firebase', 'Docker', 'AWS'],
       repoUrl: 'https://github.com/uuriah/LeBroncoHacks',
       images: [{ src: '/carboncloset.png', alt: 'Carbon Closet'},],
     },
@@ -154,15 +164,15 @@ export const site: SiteConfig = {
       title: 'Recyclable or Not Bot',
       description:
         `Recyclable or Not Bot is a computer vision web app that classifies recyclable and non-recyclable items using Ultralytics YOLO object detection model. 
-        Its purpose is to promote eco-friendly waste disposal. Awarded best sustainability track at the UC Riverside Hackathon (Rosehack) 2025.`,
-      tags: ['Python', 'Flask', 'OpenCV', 'Ultralytics YOLO', 'React', 'JavaScript', 'CSS'],
+        Its purpose is to promote eco-friendly waste disposal. Awarded best sustainability track at UC Riverside Hackathon (Rosehack) 2025.`,
+      tags: ['JavaScript', 'CSS', 'React', 'Python', 'Flask', 'OpenCV', 'YOLO'],
       repoUrl: 'https://github.com/joshmre/computer-vision-webapp',
       videoUrl: 'https://www.youtube.com/watch?v=oJyRTPOPXxo',
     },
     {
       title: 'Icebreak',
       description:
-        `Icebreak is SEA’s mobile platform to connect school organizations with their members. 
+        `Icebreak is Cal Poly Pomona SEA’s mobile platform to connect school organizations with their members. 
         Icebreak aims to be the central hub for members to remain updated on current organization events.`,
       tags: ['JavaScript', 'React Native', 'Express.js', 'PostgreSQL'],
       repoUrl: 'https://github.com/cppsea/icebreak',
@@ -172,8 +182,8 @@ export const site: SiteConfig = {
     {
       title: 'BroncoDirectMe',
       description:
-        `BroncoDirectMe is an extension for Chrome and other Chromium-based browsers that enhances the BroncoDirect website. 
-        This extension’s purpose is to make it easier for Cal Poly Pomona students to make an informed decision when registering for classes.`,
+        `BroncoDirectMe is a browser extension for Chrome and other Chromium-based browsers that enhances Cal Poly Pomona’s BroncoDirect website. 
+        It displays professor ratings from RateMyProfessors directly within BroncoDirect, helping students during course registration.`,
       tags: ['TypeScript', 'CSS', 'React', 'Express.js', 'MySQL'],
       repoUrl: 'https://github.com/BroncoDirectMe',
       liveUrl: 'https://broncodirect.me/',
@@ -182,8 +192,8 @@ export const site: SiteConfig = {
     {
       title: 'LetMesh',
       description:
-        `LetMesh is an open-source project that aims to provide students with a unique opportunity to gain mentorship, practice collaborative skills, 
-        and familiarize themselves with modern technologies and software methodologies. `,
+        `LetMesh is a web application aims to match mentees with mentors based on preferences, career goals, and major, giving students the opportunity 
+        to gain mentorship and advance their careers. `,
       tags: ['TypeScript', 'CSS', 'React', 'Python', 'Django'],
       repoUrl: 'https://github.com/LetsMesh',
       images: [{ src: '/mesh.png', alt: 'LetMesh'},],
