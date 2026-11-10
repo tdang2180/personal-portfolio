@@ -8,12 +8,12 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="scroll-mt-24 border-b border-border-strong/60 pt-12 sm:pb-10 sm:pt-16"
+      className="scroll-mt-24 border-b border-border-strong/60 pb-12 pt-12 sm:pb-10 sm:pt-16"
       aria-labelledby="hero-heading"
     >
       <SectionContainer width={SECTION_WIDTH.hero}>
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-12">
-          <div className="min-w-0">
+        <div className="grid gap-y-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:grid-rows-[1fr_auto_auto_1fr] lg:gap-x-12 lg:gap-y-0">
+          <div className="min-w-0 lg:col-start-1 lg:row-start-2">
             <h1
               id="hero-heading"
               className="text-3xl font-semibold tracking-tight text-foreground sm:text-5xl sm:leading-[1.1]"
@@ -23,12 +23,15 @@ export function Hero() {
             <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
               {site.tagline}
             </p>
-            <p className="mt-4 max-w-2xl leading-relaxed">{site.intro}</p>
+          </div>
+
+          <div className="min-w-0 lg:col-start-1 lg:row-start-3">
+            <p className="max-w-2xl leading-relaxed lg:mt-4">{site.intro}</p>
             <Contact />
           </div>
 
           {media ? (
-            <figure className="mx-auto shrink-0 lg:mx-0">
+            <figure className="row-start-2 mx-auto shrink-0 lg:col-start-2 lg:row-span-4 lg:row-start-1 lg:mx-0 lg:self-center">
               <img
                 src={media.src}
                 alt={media.alt}

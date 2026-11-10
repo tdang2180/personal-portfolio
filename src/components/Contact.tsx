@@ -91,7 +91,7 @@ export function Contact() {
           </li>
         ))}
         {textLinks.length > 0 ? (
-          <li className="mt-1 flex w-full items-center border-t border-border-strong pt-3 sm:mt-0 sm:w-auto sm:border-t-0 sm:border-l sm:pt-0 sm:pl-3">
+          <li className="flex items-center border-l border-border-strong pl-3">
             {textLinks.map((link) => (
               <TextLink
                 key={link.href}

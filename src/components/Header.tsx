@@ -9,14 +9,14 @@ const nav = [
 ] as const
 
 const linkClass =
-  'rounded-md px-2 py-1.5 text-sm font-medium tracking-tight text-muted transition-colors hover:bg-surface-hover hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-3 sm:py-2 sm:text-base sm:text-lg'
+  'whitespace-nowrap rounded-md px-1.5 py-1.5 text-sm font-medium tracking-tight text-muted transition-colors hover:bg-surface-hover hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-3 sm:py-2 sm:text-base sm:text-lg'
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border-strong/80 bg-header-bg backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-border-strong/80 bg-header-bg px-4 backdrop-blur-md sm:px-6 lg:px-8">
       <SectionContainer
         width={SECTION_WIDTH.header}
-        className="flex items-center justify-between gap-4 py-3 sm:gap-8 sm:py-4 lg:gap-16"
+        className="flex items-center justify-between gap-2 py-3 sm:gap-8 sm:py-4 lg:gap-16"
       >
         <a
           href="#top"
@@ -24,9 +24,9 @@ export function Header() {
         >
           {site.name.split(' ')[0]}
         </a>
-        <div className="flex min-w-0 items-center justify-end gap-2 sm:gap-5 lg:gap-6">
+        <div className="flex min-w-0 items-center justify-end gap-1.5 sm:gap-5 lg:gap-6">
           <nav aria-label="Primary" className="min-w-0">
-            <ul className="flex flex-wrap items-center justify-end gap-4 sm:gap-8 lg:gap-10">
+            <ul className="flex items-center justify-end gap-0.5 sm:gap-8 lg:gap-10">
               {nav.map((item) => (
                 <li key={item.href}>
                   <a href={item.href} className={linkClass}>
